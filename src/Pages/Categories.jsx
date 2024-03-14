@@ -11,7 +11,7 @@ const CategoryList = () => {
           console.log('Response data:', response.data);
           setData(response.data);
         } catch (error) {
-          console.error('Error fetching data:', error);
+          console.error('Error fetching data:', error); 
         }
       };
   
