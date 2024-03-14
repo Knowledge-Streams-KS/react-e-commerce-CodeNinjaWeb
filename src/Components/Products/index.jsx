@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"
 import axios from "axios";
 
 const ProductList = () => {
@@ -6,6 +7,12 @@ const ProductList = () => {
   const [sortedData, setSortedData] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [sortOption, setSortOption] = useState('');
+
+  const navigate = useNavigate();
+
+  const redirect = () => {
+    navigate("/")
+  }
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,7 +68,8 @@ const ProductList = () => {
         placeholder="Search products..."
         value={searchTerm}
         onChange={handleSearch}
-      />
+      /> &nbsp;&nbsp;
+      <button type="submit" onClick={redirect}>Goto Homepage!!!</button>
       <div>
         <label htmlFor="sortDropdown">Sort by: </label>
         <select id="sortDropdown" value={sortOption} onChange={(e) => handleSort(e.target.value)}>
@@ -74,7 +82,6 @@ const ProductList = () => {
       </div>
       {sortedData.length > 0 ? (
         <div>
-          {/* Render your data here */}
           {sortedData.map(item => (
             <div key={item.id}>
               <p>Name: {item.title}</p>
