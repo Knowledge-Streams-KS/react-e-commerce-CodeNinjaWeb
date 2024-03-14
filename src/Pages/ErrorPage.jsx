@@ -10,7 +10,7 @@ const ErrorPage = () => {
   return (
     <div>
       <h1>Product Not Found!!!!!! </h1>
-      <button onClick={HandleClick}>GoTo Homepage....</button>
+      <button onClick={HandleClick}>View Homepage</button>
     </div>
   );
 };
