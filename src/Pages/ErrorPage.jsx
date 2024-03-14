@@ -5,7 +5,7 @@ const ErrorPage = () => {
   const navigate = useNavigate();
 
   const HandleClick = () => {
-    navigate("/Categories")
+    navigate("/")
   }
   return (
     <div>
