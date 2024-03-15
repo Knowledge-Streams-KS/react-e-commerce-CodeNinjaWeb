@@ -5,7 +5,8 @@ const PrivateRoute = (props) => {
         isLoggedin ? <>
         props.children;
         </> : <>
-        <Navigate to="/" replace={true} /></>
+        <Navigate to="/" replace={true} />
+        </>
      );
 }
  
