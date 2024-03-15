@@ -12,6 +12,7 @@ function App() {
       <Routes path="" element={<PrivateRoute/>}>
         <Route path="/cart" element={<CartPage />}></Route>
       </Routes>
+      
       <Routes>
         <Route path="/" element={<Homepage />}></Route>
         <Route
